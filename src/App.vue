@@ -1,32 +1,31 @@
 <template>
   <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
-    <router-view/>
+    <router-view></router-view>
+    <div class="box">
+
+    </div>
+    <div>
+      <i class="iconfont icon-shoucang"></i>
+      <van-tabs v-model="active">
+        <van-tab title="标签 1">内容 1</van-tab>
+        <van-tab title="标签 2">内容 2</van-tab>
+        <van-tab title="标签 3">内容 3</van-tab>
+        <van-tab title="标签 4">内容 4</van-tab>
+      </van-tabs>
+    </div>
   </div>
 </template>
 
-<style lang="less">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+<script>
+export default {
+  name: 'App'
 }
+</script>
 
-nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+<style lang='less'>
+.box{
+  width: 200px;
+  height: 60px;
+  background-color: pink;
 }
 </style>
